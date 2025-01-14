@@ -17,7 +17,7 @@ export default function SplashScreen2({ navigation }) {
       <View style={styles.textContainer}>
         <Text style={styles.title}>Unlock Extra Income </Text>
         <Text style={styles.description}>
-        Have something collecting dust? List it on Rentify and let it earn for you while helping others.
+        Find affordable, unique and vintage treasure!
         </Text>
       </View>
 
