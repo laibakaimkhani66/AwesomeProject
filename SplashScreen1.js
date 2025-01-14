@@ -5,11 +5,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const SplashScreen1 = ({ navigation }) => {
   useEffect(() => {
     const checkLoginStatus = async () => {
-      // Retrieve user ID from AsyncStorage
+     
       const UserId = await AsyncStorage.getItem('userId');
       console.log(UserId);
 
-      // Navigate based on user status
+     
       if (UserId) {
         navigation.reset({
           index: 0,
@@ -23,7 +23,7 @@ const SplashScreen1 = ({ navigation }) => {
       }
     };
 
-    // Set a timer of 3 seconds before checking login status
+    
     const timer = setTimeout(() => {
       checkLoginStatus();
     }, 3000); // 3000ms = 3 seconds
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5', // Light background with subtle gradient effect
+    backgroundColor: '#f5f5f5', 
   },
   logo: {
     width: 290,
