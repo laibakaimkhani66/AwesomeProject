@@ -5,8 +5,8 @@ import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
 import DocumentPicker from 'react-native-document-picker';
 
-const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dvi4ak9cq/upload'; // Your Cloudinary URL
-const UPLOAD_PRESET = 'laibakk'; // Your unsigned preset
+const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dvi4ak9cq/upload'; 
+const UPLOAD_PRESET = 'laibakk';
 
 export default function MyListedProductsScreen({ route }) {
   const { userId } = route.params;
@@ -15,7 +15,7 @@ export default function MyListedProductsScreen({ route }) {
   const [productData, setProductData] = useState([]);
   const [uploading, setUploading] = useState(false);
 
-  // Fetch user products
+  
   const fetchUserProducts = async (userId) => {
     if (userId) {
       try {
@@ -72,7 +72,7 @@ export default function MyListedProductsScreen({ route }) {
     }
   };
 
-  // Handle file upload for a new product or update
+  
   const handleFileUpload = async () => {
     try {
       const file = await DocumentPicker.pickSingle({
@@ -83,7 +83,7 @@ export default function MyListedProductsScreen({ route }) {
 
       const uploadedUrl = await uploadToCloudinary(file);
       if (uploadedUrl) {
-        // Logic to update product with the uploaded image URL
+        
         const currentUser = auth().currentUser;
 
         if (currentUser) {
@@ -99,7 +99,7 @@ export default function MyListedProductsScreen({ route }) {
               image: uploadedUrl,      
             });
 
-          fetchUserProducts(currentUser.uid); // Re-fetch the products after adding
+          fetchUserProducts(currentUser.uid); 
         }
       }
     } catch (error) {
