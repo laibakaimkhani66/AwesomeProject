@@ -17,7 +17,7 @@ export default function SplashScreen3({ navigation }) {
       <View style={styles.textContainer}>
         <Text style={styles.title}>Rent Anything, Anytime</Text>
         <Text style={styles.description}>
-        Need it now, not forever? Browse, rent, and enjoy the things you want without the cost of ownership. Welcome to Rentify!
+         Welcome to Revive Fashion, where style meets sustainability!
         </Text>
       </View>
 
