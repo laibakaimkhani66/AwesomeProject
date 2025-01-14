@@ -3,12 +3,12 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView, Alert } fr
 import Swiper from 'react-native-swiper';
 
 export default function ProductDetailsPage({ navigation }) {
-  const [cartItems, setCartItems] = useState([]); // State to hold cart items
+  const [cartItems, setCartItems] = useState([]); 
 
   const product = {
     id: 1,
     name: 'Sample Pre-Loved Clothes',
-    sellingPrice: 1500,  // Changed to number for correct calculation
+    sellingPrice: 1500,  
     originalPrice: 2000,
     category: 'Casual Wear',
     size: 'Small',
@@ -36,7 +36,7 @@ export default function ProductDetailsPage({ navigation }) {
 
   // Handle Add to Cart functionality
   const handleAddToCart = () => {
-    setCartItems([...cartItems, product]); // Add the product to the cart
+    setCartItems([...cartItems, product]); 
     Alert.alert('Success', 'Product added to cart!');
   };
 
@@ -47,7 +47,7 @@ export default function ProductDetailsPage({ navigation }) {
 
   // Handle Cart Icon press to navigate to the cart screen
   const handleCartPress = () => {
-    navigation.navigate('Cart', { cartItems }); // Pass cart items to Cart screen
+    navigation.navigate('Cart', { cartItems }); 
   };
 
   return (
