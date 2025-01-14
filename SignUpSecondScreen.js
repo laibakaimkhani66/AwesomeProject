@@ -13,7 +13,7 @@ import firestore from '@react-native-firebase/firestore';
 const SignUpSecondScreen = ({ route }) => {
 
 
-  const { userId, email } = route.params; // Get userId and email passed from the first screen
+  const { userId, email } = route.params; 
 
   const navigation = useNavigation();
 
@@ -24,10 +24,10 @@ const SignUpSecondScreen = ({ route }) => {
   const [phone, setPhone] = useState('');
   const [cnic, setCnic] = useState('');
   const [address, setAddress] = useState('');
-  const [cnicFront, setCnicFront] = useState(); // To store the URI of the front CNIC picture
-  const [cnicBack, setCnicBack] = useState();  // To store the URI of the back CNIC picture
+  const [cnicFront, setCnicFront] = useState(); 
+  const [cnicBack, setCnicBack] = useState();  
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false); // State to manage loading spinner
+  const [loading, setLoading] = useState(false); 
 
 
   const validateFields = () => {
